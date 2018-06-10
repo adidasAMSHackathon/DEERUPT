@@ -68,6 +68,10 @@ header {
     padding-bottom: 1rem;
     margin-bottom: 0;
 
+    & h2 {
+      font-family: 'Adidas Bold';
+    }
+
     & .clock {
       display: flex;
       justify-content: space-around;
@@ -91,7 +95,7 @@ header {
       align-items: center;
 
       & h1 {
-        font-family: 'Adidas Black';
+        font-family: Adidas;
         font-size: 35px;
       }
 
@@ -114,7 +118,7 @@ header {
 
 h1 {
   font-size: 3rem;
-  font-family: 'Adidas Black';
+  font-family: Adidas;
 }
 
 main {
@@ -125,6 +129,7 @@ main {
 
   & h1 {
     margin-bottom: .5rem;
+    font-family: 'Adidas Bold';
   }
 
   & h3 {
