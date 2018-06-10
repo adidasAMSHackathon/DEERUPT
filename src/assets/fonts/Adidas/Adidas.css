@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Adidas;
+  src: url(adineuePROCyr-RegularWeb.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adidas Black';
+  src: url(adineuePROCyr-BlackWeb.woff) format('woff');
+  font-weight: black;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adidas Bold';
+  src: url(adineuePROCyr-BoldWeb.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

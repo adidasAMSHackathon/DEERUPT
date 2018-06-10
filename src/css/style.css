@@ -6,41 +6,154 @@ html {
 }
 
 body {
-  font-family: Roboto;
+  font-family: Adidas, sans-serif;
   font-size: 1.6rem;
-  margin: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  margin-left: 8rem;
+}
+
+.xp {
+  width: 90%;
+  margin-top: 4rem;
 }
 
 header {
-  margin: 2rem 0;
+  padding: 2rem 0;
+  background-color: black;
+  color: white;
+
+  & .header-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  & .header-right {
+    background-image: url(/assets/img/pattern.jpg);
+    background-size: contain;
+    position: relative;
+    right: -20px;
+    top: -30px;
+    width: calc(100% - 8rem - 100px);
+    height: 155px;
+    margin-bottom: 0;
+  }
+
+  & .header-left {
+    display: flex;
+    flex-direction: column;
+
+    & h2 {
+      font-family: 'Adidas Bold';
+      margin-left: 5rem;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  & .header-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+
+    & .clock {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-color: black;
+      width: 100%;
+      height: 51px;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+      bottom: calc(-2rem - 50px);
+    }
+
+    & .days, & .hours, & .minutes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h1 {
+        font-family: 'Adidas Black';
+        font-size: 35px;
+      }
+
+      & span {
+        text-transform: lowercase;
+        font-size: 15px;
+      }
+    }
+
+    & span {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
 
   & div {
-    margin-top: 1rem;
-    margin-left: 1rem;
     margin-bottom: 1rem;
   }
 }
 
 h1 {
   font-size: 3rem;
+  font-family: 'Adidas Black';
 }
 
-select {
-  background-color: white;
-  color: black;
-  padding: 15px;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 3rem;
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem;
+
+  & h1 {
+    margin-bottom: .5rem;
+  }
+
+  & h3 {
+    margin-left: 3rem;
+    margin-bottom: .5rem;
+    margin-top: 4rem;
+    font-weight: normal;
+  }
+
+  & span {
+    color: red;
+  }
+
+  & .imgList {
+    display: flex;
+    max-width: 100vw;
+
+    & img {
+      width: 33%;
+      height: 136px;
+      margin-left: 0;
+    }
+  }
 }
 
-span {
-  font-size: 12px;
-  text-transform: uppercase;
-}
+.productList {
 
-h2 {
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: capitalize;
+  & h3 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
 }

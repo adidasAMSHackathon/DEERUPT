@@ -170,7 +170,7 @@ let data =
         }
       }
     },
-    Patrick: {
+    Jonas: {
       gender: `male`,
       birthdate: `15/08/1993`,
       data: {
@@ -399,11 +399,29 @@ const updateData = () => {
 
         Object.keys(programData).forEach(key => {
           let gegevens = ``;
+          let dataLoop = ``;
           if (programData[key].length !== undefined) {
             gegevens = `: ${programData[key]}`;
+          } else {
+            dataLoop = programData[key];
           }
-          console.log(key, `:`, programData[key]);
           document.querySelector(`.${programName}`).innerHTML += `<p class="${key}">${key}${gegevens}</p><br/>`;
+
+          Object.keys(dataLoop).forEach(data => {
+            console.log(data);
+            console.log(dataLoop[data]);
+            let detail = ``;
+            if (dataLoop[data].steps !== undefined) {
+              detail = dataLoop[data].steps;
+            } else if (dataLoop[data].distance !== undefined) {
+              detail = dataLoop[data].distance;
+            } else {
+              detail = dataLoop[data].avgRate;
+            }
+
+
+            document.querySelector(`.${key}`).innerHTML += `<p>${detail}</p>`;
+          });
         });
       });
     }
